@@ -19,8 +19,10 @@ export class AbilityFactory {
 
       if (user.role === Role.MANAGER) {
         can('manage', ['User', 'Vehicle'], { companyId });
+        can('manage', 'Refueling', { vehicle: { companyId } });
       } else {
         can('read', ['User', 'Vehicle'], { companyId });
+        can('read', 'Refueling', { vehicle: { companyId } });
       }
     }
 

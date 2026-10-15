@@ -5,6 +5,7 @@ export type AppSubjects = Subjects<{
   Company: { id: string };
   User: { companyId: string | null };
   Vehicle: { companyId: string };
+  Refueling: { vehicle: { companyId: string } };
 }>;
 
 export type Actions = 'create' | 'read' | 'update' | 'delete' | 'manage';
