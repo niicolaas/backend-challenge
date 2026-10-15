@@ -10,6 +10,7 @@ import { AbilityModule } from './modules/ability/ability.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CompaniesModule } from './modules/companies/companies.module';
 import { UsersModule } from './modules/users/users.module';
+import { VehiclesModule } from './modules/vehicles/vehicles.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { UsersModule } from './modules/users/users.module';
     AuthModule,
     CompaniesModule,
     UsersModule,
+    VehiclesModule
   ],
   controllers: [HealthController],
   providers: [
