@@ -7,7 +7,6 @@ import { AuthUser } from 'src/common/interfaces/auth-user.interface';
 import { Role } from 'src/common/enums/role.enum';
 import { QueryVehicleDto } from '../dtos/query-vehicle.dto';
 import { accessibleBy } from '@casl/prisma/runtime';
-import { QueryCompanyDto } from 'src/modules/companies/dtos/query-company.dto';
 import { UpdateVehicleDto } from '../dtos/update-vehicle.dto';
 
 const VEHICLE_SELECT = {
