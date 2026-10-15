@@ -59,8 +59,25 @@ model Vehicle {
   deletedAt   DateTime? @map("deleted_at")
 
   company Company @relation(name: "CompanyToVehicle", fields: [companyId], references: [id])
+  refuelings Refueling[] @relation(name: "VehicleToRefueling")
 
   @@index([companyId])
   @@index([companyId, plate])
   @@map("vehicle")
+}
+
+model Refueling {
+  id String @id @default(cuid(2))
+  vehicleId String @map("vehicle_id")
+  date DateTime
+  liters Float
+  totalSpent Float @map("total_spent")
+  odometer Int
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  vehicle Vehicle @relation(name: "VehicleToRefueling", fields: [vehicleId], references: [id], onDelete: Cascade)
+
+  @@index([vehicleId])
+  @@map("refueling")
 }
