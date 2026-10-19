@@ -56,7 +56,7 @@ export class VehiclesService {
 
     this.logger.log(`Vehicle ${vehicle.id} created`);
 
-    return { id: vehicle.id, message: 'Vehicle created successfully' };
+    return { id: vehicle.id, message: 'Veículo criado com sucesso' };
   }
 
   async findAll(params: QueryVehicleDto, user: AuthUser) { 
@@ -122,7 +122,7 @@ export class VehiclesService {
       data: data,
     });
 
-    return { id: updatedVehicle.id, message: 'Vehicle updated successfully' };
+    return { id: updatedVehicle.id, message: 'Veículo atualizado com sucesso' };
   }
 
   async remove(id: string, user: AuthUser): Promise<void> {
